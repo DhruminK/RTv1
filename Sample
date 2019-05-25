@@ -1,0 +1,97 @@
+#
+# Scene 1
+#
+
+Scene
+{
+	Camera
+	{
+		origin : (0, 0, 0)
+		up : (0, 1, 0)
+		direction ::::::: (1, 0, 0)
+		screen : (1024, 1024)
+		right : (0, 0, -1)
+		ambient : 0
+	}
+	light
+	{
+		origin : (0, 100, 0)
+		intensity : 10000
+		color : 0xFFFF00
+	}
+
+# objects
+	object
+	{
+		name : Sphere
+		position : (5, 0, 0)
+		Specular : 0.05
+		reflection : 10000
+		radius : 0.75
+		transform
+		{
+			scale : -2
+		}
+		color : 0xFF00FF
+	}
+	object
+	{
+		name : Torus
+		position : (0, 2, 0)
+		Specular : 1000
+		ks : 0.4
+		radius : (1, 0.25)
+		transform
+		{
+			translate : (5, 0, 0)
+			rotate : (33, 33, 0)
+		}
+		color : 0xD00D00
+	}
+	object
+	{
+		name : Sierpinski
+		position : (-2, 0, 0)
+		color : 0xCF3AB3
+	}
+	object
+	{
+		name : Plane
+		position : (100, 0, 0)
+		normal : (-1, 0, 0)
+		color : 0x00AFFF
+	}
+	object
+	{
+		name : Plane
+		position : (0, -100, 0)
+		normal : (0, 1, 0)
+		color : 0xF00FF0
+	}
+	object
+	{
+		name : Plane
+		position : (-100, 0, 0)
+		normal : (1, 0, 0)
+		color : 0x3BCD8C
+	}
+#	object
+#	{
+#		name : Mandelblub
+#		position : (10, 0, 0)
+#		color : 0x0FF00A
+#	}
+	light
+	{
+		origin : (5, 0, -5)
+		intensity : 50
+		color : 0xFFFFFF
+	}
+	light
+	{
+		origin : (5, 0, 5)
+		intensity : 50
+		color : 0xFFFFFF
+	}
+}
+
