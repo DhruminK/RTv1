@@ -6,7 +6,7 @@
 #    By: trobicho <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/11 16:16:52 by trobicho          #+#    #+#              #
-#    Updated: 2019/05/13 17:15:22 by trobicho         ###   ########.fr        #
+#    Updated: 2019/10/30 19:29:13 by dkhatri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,10 @@ all: $(NAME)
 
 $(NAME): $(OUTS)
 	make -C libft
-	$(CC) $(OUTS) $(CFLAGS) -lm -lmlx -lpthread -framework OpenGL -framework AppKit -O2 -o $(NAME) -lft -Llibft
+	$(CC) $(OUTS) $(CFLAGS) -lm \
+		-L./minilibx_macos -lmlx \
+		-lpthread -framework OpenGL \
+		-framework AppKit -O2 -o $(NAME) -lft -Llibft
 
 parse: $(OUTS)
 	make -C libft
